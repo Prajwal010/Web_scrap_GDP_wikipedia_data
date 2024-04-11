@@ -13,7 +13,7 @@ db_name = 'World_Economies.db'
 table_name = 'Countries_by_GDP'
 csv_path = './Countries_by_GDP.csv'
 
-# Extracting Information
+# Extracting and parsing Information
 def extract(url, table_attribs):
     page = requests.get(url).text
     data = BeautifulSoup(page,'html.parser')
@@ -73,9 +73,7 @@ def log_progress(message):
 
     ''' This function logs the mentioned message at a given stage of the code execution to a log file. Function returns nothing'''
 
-''' Here, you define the required entities and call the relevant 
-functions in the correct order to complete the project. Note that this
-portion is not inside any function.'''
+
 
 log_progress('Preliminaries complete. Initiating ETL process')
 
